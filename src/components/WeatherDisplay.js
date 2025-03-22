@@ -7,26 +7,38 @@ const WeatherContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 `;
 
 const WeatherCard = styled(motion.div)`
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.8);
-  margin-top: 2rem;
+  margin: 0.5rem auto;
   font-family: 'Chakra Petch', sans-serif;
+
+  @media (max-width: 600px) {
+    padding: 1rem;
+    width: 95%;
+    margin: 0.25rem auto;
+  }
 `;
 
 const WeatherInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
   font-family: 'Chakra Petch', sans-serif;
 `;
 
@@ -34,27 +46,35 @@ const Location = styled.div`
   font-size: 1.2rem;
   color: #4A4A4A;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-family: 'Chakra Petch', sans-serif;
 `;
 
 const Temperature = styled.div`
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #FF8C00;
   font-family: 'Chakra Petch', sans-serif;
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 const Description = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #4A4A4A;
   text-transform: capitalize;
   font-family: 'Chakra Petch', sans-serif;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 const ClothingRecommendation = styled.div`
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
   background: rgba(255, 140, 0, 0.1);
   border-radius: 10px;
   text-align: center;
@@ -63,11 +83,17 @@ const ClothingRecommendation = styled.div`
 `;
 
 const CharacterContainer = styled(motion.div)`
-  width: 120px;
-  height: 120px;
-  margin: 2rem auto;
+  width: 80px;
+  height: 80px;
+  margin: 1rem auto;
   position: relative;
   image-rendering: pixelated;
+
+  @media (max-width: 600px) {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem auto;
+  }
 `;
 
 const PixelCharacter = styled.div`

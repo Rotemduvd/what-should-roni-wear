@@ -6,30 +6,45 @@ import LocationSelect from './components/LocationSelect';
 
 const AppContainer = styled.div`
   min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%);
   color: #4A4A4A;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   font-family: 'Chakra Petch', sans-serif;
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    margin: 0;
+    border-radius: 0;
+    padding: 0.5rem;
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
 `;
 
 const Title = styled.h1`
   font-family: 'Bungee', cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #FF8C00;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
+
+  @media (max-width: 600px) {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const App = () => {
@@ -71,7 +86,7 @@ const App = () => {
 
   return (
     <AppContainer>
-      <Title>What 2 Wear Today</Title>
+      <Title>What Should Roni Wear Today</Title>
       <AnimatePresence mode="wait">
         {!location ? (
           <LocationSelect key="location-select" onLocationSelect={handleLocationSelect} />

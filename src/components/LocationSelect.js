@@ -21,25 +21,36 @@ const Title = styled.h1`
 
 const Question = styled.h2`
   color: #4A4A4A;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   font-family: 'Chakra Petch', sans-serif;
+
+  @media (max-width: 600px) {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const LocationButtons = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (max-width: 600px) {
+    gap: 10px;
+    padding: 0 0.5rem;
+  }
 `;
 
 const LocationButton = styled(motion.button)`
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
   border: 2px solid #ff8c42;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.9);
@@ -49,8 +60,14 @@ const LocationButton = styled(motion.button)`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   -webkit-tap-highlight-color: transparent;
   flex: 1;
-  min-width: 140px;
+  min-width: 120px;
   transition: all 0.3s ease;
+
+  @media (max-width: 600px) {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-width: 100px;
+  }
 
   &:hover {
     transform: translateY(-2px);
