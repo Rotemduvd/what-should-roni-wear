@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/what-should-roni-wear/static/css/main.4ad0ad19.css",
-    "main.js": "/what-should-roni-wear/static/js/main.516c8e02.js",
+    "main.js": "/what-should-roni-wear/static/js/main.e1f40f5b.js",
     "static/js/453.82e48532.chunk.js": "/what-should-roni-wear/static/js/453.82e48532.chunk.js",
     "index.html": "/what-should-roni-wear/index.html",
     "main.4ad0ad19.css.map": "/what-should-roni-wear/static/css/main.4ad0ad19.css.map",
-    "main.516c8e02.js.map": "/what-should-roni-wear/static/js/main.516c8e02.js.map",
+    "main.e1f40f5b.js.map": "/what-should-roni-wear/static/js/main.e1f40f5b.js.map",
     "453.82e48532.chunk.js.map": "/what-should-roni-wear/static/js/453.82e48532.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ad0ad19.css",
-    "static/js/main.516c8e02.js"
+    "static/js/main.e1f40f5b.js"
   ]
 }
